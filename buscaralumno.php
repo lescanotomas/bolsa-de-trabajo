@@ -40,7 +40,7 @@ include('conexion.php');
 
 
 <div class="card" style="width: 18rem;margin-left:3%;margin-top:1%;float:left">
-  <img class="card-img-top" src="http://localhost/bolsadetrabajo/assets/img/<?php echo $row['imagen']?>" alt="Card image cap">
+  <img class="card-img-top" src="http://localhost/bolsa-de-trabajo/assets/img/<?php echo $row['imagen']?>" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title"><?php echo $row['nombre']; ?></h5>
     <p class="card-text" style="color:rgb(9,9,10)"><?php echo $row['descripcion'];?></p>
