@@ -16,7 +16,7 @@ include('conexion.php');
         $descripcion = $_POST['descripcion'];
         $promedio = $_POST['promedio'];
 
-        $query = "UPDATE usuarios SET nombre='$nombre',descripcion='$descripcion',especialidad='$especialidad',promedio='$promedio' WHERE email='$email' and pwd='$pwd'";
+        $query = "UPDATE usuarios SET nombre='$nombre',descripcion='$descripcion',especialidad='$especialidad',promedio='$promedio', perfilCreado=1 WHERE email='$email' and pwd='$pwd'";
         $envio = $conexion->query($query);
 }
 
