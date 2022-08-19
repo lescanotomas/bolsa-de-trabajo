@@ -9,13 +9,16 @@ if (isset($_POST["usuario"])&&isset($_POST["pwd"]))
 						session_start();
 						$_SESSION['usuario']=$_POST["usuario"];
 						$_SESSION['tipousuario'] = $row['tipousuario'];
+            $perfilCreado['perfilCreado'] = $row['perfilCreado'];
 
 						if($_SESSION['tipousuario'] == 'empresa'){
 							header("Location:inicio.php");
 						}
-						if($_SESSION['tipousuario'] == 'alumno'){
+						if($_SESSION['tipousuario'] == 'alumno' && $perfilCreado['perfilCreado'] == 0){
 							header("Location:inicio2.php");
-						}
+						} else {
+              header("Location:verofertas.php");
+            }
 						
 						}
 	else{
